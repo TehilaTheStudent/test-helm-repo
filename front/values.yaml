@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: "1.24.0"
+  pullPolicy: IfNotPresent
+
+service:
+  name: front-service
+  type: ClusterIP
+  port: 80
+
+resources: {}
+
+deployment:
+  name: front-deploy
